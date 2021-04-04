@@ -1,0 +1,48 @@
+<div class = "main-container">
+  <h3>スケジュール編集</h3>
+
+  <% if flash.alert %>
+    <p class="alert"><%= flash.alert %></p>
+  <% end %>
+
+  <%= render "shared/error", obj: @schedule %>
+  
+  <%= form_for @schedule do |f| %>
+    <table>
+      <tr>
+        <th><%= f.label :title,"件名" %></th>
+        <td><%= f.text_field :title %></td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :start_date ,"開始日時" %></th>
+        <td><%= f.datetime_field :start_date %></td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :end_date ,"終了日時" %></th>
+        <td><%= f.datetime_field :end_date %></td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :all_day ,"終日" %></th>
+        <td>
+          <%= f.check_box :all_day %>
+          <p>終日の場合は、チェックを入れてください</p>
+        </td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :content ,"内容" %></th>
+        <td><%= f.text_area :content %></td>
+      </tr>
+    </table>
+
+    <div>
+      <ul>
+        <li class = "button registration-button"><%= f.submit "登録完了する"%></li>
+        <li class = "button registration-button"><%= link_to "スケジュール一覧に戻る", :schedules %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>

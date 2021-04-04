@@ -1,0 +1,36 @@
+<div class = "main-container">
+  <h3>スケジュール詳細</h3>
+  
+      <table>
+        <tr>
+          <th>件名</th>
+          <td><%= @schedule.title %></td>
+        </tr>
+        <tr>
+          <th>開始日時</th>
+          <td><%= @schedule.start_date.to_s(:datetime_jp) %></td>
+        </tr>
+        <tr>
+          <th>終了日時</th>
+          <td><%= @schedule.end_date.to_s(:datetime_jp) %></td>
+        </tr>
+        <tr>
+          <th>終日</th>
+          <td>
+            <% if @schedule.all_day %>
+              <p>○</p>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <th>内容</th>
+          <td><%= @schedule.content %></td>
+        </tr>
+      </table>
+  
+      <div>
+        <ul>
+          <li class = "button show-button"><%= link_to "スケジュール一覧に戻る", :schedules %></li>
+        </ul>
+      </div>
+</div>
