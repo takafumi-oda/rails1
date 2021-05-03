@@ -1,0 +1,162 @@
+// Place all the styles related to the schedules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: darkorange;
+    color:white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer{
+    background-color: darkorange;
+    color:white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.main-container{
+    background-color: wheat;
+    min-height: calc(100vh - 122px);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.main-container h3{
+    padding-top:20px;
+    padding-bottom: 10px;
+}
+
+table {
+    border-collapse:  collapse; /* セルの線を重ねる */
+    background-color: white;
+}
+
+table th {
+    border: solid 1px black;
+    height: 50px;
+    padding: 10px 20px;
+}
+
+#title-column{
+    width:220px;
+}
+
+#start_date-column, #end_date-column, #update-column{
+    width:240px;
+}
+
+#all_day-column, #content-column, #edit-column, #delete-column{
+    width:40px;
+}
+
+table td {
+    border: solid 1px black;
+    height: 50px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.button{
+    background-color: silver;
+    font-weight: bold;
+    width: 200px;
+    height: 40px;
+    box-shadow: 5px 5px gray;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position:relative;
+    left: 615px;
+}
+
+.button:hover{
+    opacity:0.8;
+}
+
+.button:active{
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+.button:nth-child(2){
+    margin-left: 10px;
+}
+
+.button a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.show-button{
+    position:relative;
+    left: 90px;
+}
+
+.registration-button{
+    position:relative;
+    left: 15px;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    border:none;
+    border-radius: 0;
+    background-color: silver;
+    outline: 0;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+input[type="datetime-local"] {
+    width: 100%;
+}
+
+#schedule_content {
+    width: 100%;
+    height: 120px;
+}
+
+.notice{
+    background-color: powderblue;
+    border: solid 2px blue;
+    color: blue;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 449px;
+    height: auto;
+    text-align: center;
+}
+
+.alert{
+    background-color: pink;
+    border: solid 2px red;
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 449px;
+    height: auto;
+    text-align: center;
+}
